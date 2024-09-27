@@ -25,8 +25,7 @@ class MatrixEvidencePage extends StatelessWidget {
               PopupMenuItem(child: Text('delete')),
               PopupMenuItem(child: Text('update')),
             ],
-
-          )
+          ),
           )
         ],
         items: [],

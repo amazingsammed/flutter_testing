@@ -1,4 +1,3 @@
-
 import 'package:testing/features/matrix/pages/functions/list_formatter.dart';
 
 import '../../datatable/datatable_v2.dart';
@@ -11,11 +10,14 @@ class MatrixRecommendationPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: DataTableV2(
         title: 'List of MatrixRecommendation',
-        titleWidget: ElevatedButton(onPressed: (){},child: Text('ADD'),),
-        ontap: (e){
+        titleWidget: ElevatedButton(
+          onPressed: () {},
+          child: Text('ADD'),
+        ),
+        ontap: (e) {
           print(e);
         },
         heads: [
@@ -23,16 +25,17 @@ class MatrixRecommendationPage extends StatelessWidget {
           TableHead(title: 'Auditcode', id: 'auditcode'),
           TableHead(title: 'Matrix', id: 'matrixno'),
           TableHead(title: 'Responsible Officer', id: 'responsibleofficer'),
-          TableHead(title: 'action', id: 'button',isbutton: true,button:
-          PopupMenuButton(
-            itemBuilder: (c)=>[
-              PopupMenuItem(child: Text('edit')),
-              PopupMenuItem(child: Text('delete')),
-              PopupMenuItem(child: Text('update')),
-            ],
-
-          )
-          )
+          TableHead(
+              title: 'action',
+              id: 'button',
+              isbutton: true,
+              button: PopupMenuButton(
+                itemBuilder: (c) => [
+                  PopupMenuItem(child: Text('edit')),
+                  PopupMenuItem(child: Text('delete')),
+                  PopupMenuItem(child: Text('update')),
+                ],
+              ))
         ],
         items: itemlist.toJsonList(),
       ),
